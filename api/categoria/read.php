@@ -17,6 +17,7 @@ $resultadocats = $dao->selectAll();
  */
 
 $arCats = array();
+//percorrendo as cats
 foreach ($resultadocats as $itemcat){
     $categoria = ['id'=>$itemcat->getId(), 'nome'=>utf8_encode($itemcat->getNome()), 'descricao'=>utf8_encode($itemcat->getDescricao())];
     $categorias[] = $categoria;
